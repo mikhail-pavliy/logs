@@ -93,7 +93,7 @@ if ($hostname == 'web') and ($programname == 'nginx_error') then {
 
 # 4. Отправлять все аудит логи на сервер log.
 Чтобы логи auditd писались на удаленный rsyslog сервер, нужно установить пакет audispd-plugins как на  web, так и на  log. Затем изменить следующие опции в конфиг файлах:
-в файле ```ruby  /etc/audisp/audisp-remote.conf: ```
+в файле  /etc/audisp/audisp-remote.conf: 
 ```ruby
 remote_server = 192.168.10.20
 port = 514
@@ -106,7 +106,7 @@ active = yes
 ```ruby
 write_logs = no
 ```
-На самом сервере log разрешить прием логов в файле ```ruby /etc/rsyslog.conf:```
+На самом сервере log разрешить прием логов в файле  /etc/rsyslog.conf:
 ```ruby
 # Provides UDP syslog reception
 	$ModLoad imudp
